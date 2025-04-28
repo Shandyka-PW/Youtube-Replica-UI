@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>YouTube Replica</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+    /* Scrollbar for sidebar */
+    .sidebar::-webkit-scrollbar {
+      width: 6px;
+    }
+    .sidebar::-webkit-scrollbar-thumb {
+      background-color: rgba(0,0,0,0.2);
+      border-radius: 3px;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-900">
+  <header class="flex items-center justify-between px-4 py-2 border-b border-gray-300 sticky top-0 bg-white z-50">
+    <div class="flex items-center space-x-4">
+      <button class="p-2 hover:bg-gray-200 rounded-md">
+        <i class="fas fa-bars fa-lg"></i>
+      </button>
+      <a href="#" class="flex items-center space-x-2">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube" class="h-6" />
+      </a>
+    </div>
+    <div class="flex flex-1 max-w-xl mx-4">
+      <input type="text" placeholder="Search" class="flex-grow border border-gray-300 rounded-l-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-red-600" />
+      <button class="bg-gray-100 border border-gray-300 border-l-0 rounded-r-full px-4 hover:bg-gray-200">
+        <i class="fas fa-search text-gray-600"></i>
+      </button>
+      <button class="ml-2 p-2 hover:bg-gray-200 rounded-full" title="Search with your voice">
+        <i class="fas fa-microphone text-gray-600"></i>
+      </button>
+    </div>
+    <div>
+      <a href="https://accounts.google.com/ServiceLogin" class="text-sm font-medium text-blue-600 hover:underline px-4 py-2 border border-blue-600 rounded-full">Sign in</a>
+    </div>
+  </header>
+
+  <div class="flex h-[calc(100vh-56px)]">
+    <nav class="sidebar w-60 border-r border-gray-300 overflow-y-auto bg-white p-4 space-y-4 sticky top-[56px]">
+      <ul class="space-y-2 text-sm font-medium text-gray-700">
+        <li>
+          <a href="index.html" class="flex items-center space-x-3 px-3 py-2 rounded bg-gray-200 font-semibold">
+            <i class="fas fa-home fa-lg"></i>
+            <span>Home</span>
+          </a>
+        </li>
+        <li>
+          <a href="short.html" class="flex items-center space-x-3 px-3 py-2 rounded hover:bg-gray-200">
+            <i class="fas fa-bolt fa-lg"></i>
+            <span>Shorts</span>
+          </a>
+        </li>
+        <li>
+          <a href="subscriptions.html" class="flex items-center space-x-3 px-3 py-2 rounded hover:bg-gray-200">
+            <i class="fas fa-play-circle fa-lg"></i>
+            <span>Subscriptions</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="flex items-center space-x-3 px-3 py-2 rounded hover:bg-gray-200">
+            <i class="fas fa-user fa-lg"></i>
+            <span>Library</span>
+          </a>
+        </li>
+        <li>
+          <a href="history.html" class="flex items-center space-x-3 px-3 py-2 rounded hover:bg-gray-200">
+            <i class="fas fa-history fa-lg"></i>
+            <span>History</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <main class="flex-1 overflow-y-auto p-6 bg-gray-50">
+      <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <!-- Video Card Template -->
+        <article class="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg transition-shadow duration-200">
+          <div class="relative pb-[56.25%] bg-gray-300">
+            <img src="https://i.ytimg.com/vi/ScMzIvxBSi4/hqdefault.jpg" alt="Video thumbnail" class="absolute top-0 left-0 w-full h-full object-cover" />
+            <span class="absolute bottom-2 right-2 bg-black bg-opacity-75 text-white text-xs px-1 rounded">12:34</span>
+          </div>
+          <div class="p-3">
+            <h3 class="text-sm font-semibold mb-1 line-clamp-2">Sample Video Title 1</h3>
+            <p class="text-xs text-gray-600">Channel Name • 1.2M views • 2 days ago</p>
+          </div>
+        </article>
+        <article class="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg transition-shadow duration-200">
+          <div class="relative pb-[56.25%] bg-gray-300">
+            <img src="https://i.ytimg.com/vi/tgbNymZ7vqY/hqdefault.jpg" alt="Video thumbnail" class="absolute top-0 left-0 w-full h-full object-cover" />
+            <span class="absolute bottom-2 right-2 bg-black bg-opacity-75 text-white text-xs px-1 rounded">8:20</span>
+          </div>
+          <div class="p-3">
+            <h3 class="text-sm font-semibold mb-1 line-clamp-2">Sample Video Title 2</h3>
+            <p class="text-xs text-gray-600">Another Channel • 500K views • 1 week ago</p>
+          </div>
+        </article>
+        <article class="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg transition-shadow duration-200">
+          <div class="relative pb-[56.25%] bg-gray-300">
+            <img src="https://i.ytimg.com/vi/3fumBcKC6RE/hqdefault.jpg" alt="Video thumbnail" class="absolute top-0 left-0 w-full h-full object-cover" />
+            <span class="absolute bottom-2 right-2 bg-black bg-opacity-75 text-white text-xs px-1 rounded">5:45</span>
+          </div>
+          <div class="p-3">
+            <h3 class="text-sm font-semibold mb-1 line-clamp-2">Sample Video Title 3</h3>
+            <p class="text-xs text-gray-600">Channel Three • 2M views • 3 days ago</p>
+          </div>
+        </article>
+        <article class="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg transition-shadow duration-200">
+          <div class="relative pb-[56.25%] bg-gray-300">
+            <img src="https://i.ytimg.com/vi/e-ORhEE9VVg/hqdefault.jpg" alt="Video thumbnail" class="absolute top-0 left-0 w-full h-full object-cover" />
+            <span class="absolute bottom-2 right-2 bg-black bg-opacity-75 text-white text-xs px-1 rounded">10:10</span>
+          </div>
+          <div class="p-3">
+            <h3 class="text-sm font-semibold mb-1 line-clamp-2">Sample Video Title 4</h3>
+            <p class="text-xs text-gray-600">Channel Four • 750K views • 5 days ago</p>
+          </div>
+        </article>
+
+        <article class="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg transition-shadow duration-200">
+          <div class="relative pb-[56.25%] bg-gray-300">
+            <img src="https://i.ytimg.com/vi/aqz-KE-bpKQ/hqdefault.jpg" alt="Video thumbnail" class="absolute top-0 left-0 w-full h-full object-cover" />
+            <span class="absolute bottom-2 right-2 bg-black bg-opacity-75 text-white text-xs px-1 rounded">15:00</span>
+          </div>
+          <div class="p-3">
+            <h3 class="text-sm font-semibold mb-1 line-clamp-2">Sample Video Title 5</h3>
+            <p class="text-xs text-gray-600">Channel Five • 900K views • 1 day ago</p>
+          </div>
+        </article>
+        <article class="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg transition-shadow duration-200">
+          <div class="relative pb-[56.25%] bg-gray-300">
+            <img src="https://i.ytimg.com/vi/ysz5S6PUM-U/hqdefault.jpg" alt="Video thumbnail" class="absolute top-0 left-0 w-full h-full object-cover" />
+            <span class="absolute bottom-2 right-2 bg-black bg-opacity-75 text-white text-xs px-1 rounded">3:30</span>
+          </div>
+          <div class="p-3">
+            <h3 class="text-sm font-semibold mb-1 line-clamp-2">Sample Video Title 6</h3>
+            <p class="text-xs text-gray-600">Channel Six • 1.5M views • 4 days ago</p>
+          </div>
+        </article>
+        <article class="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg transition-shadow duration-200">
+          <div class="relative pb-[56.25%] bg-gray-300">
+            <img src="https://i.ytimg.com/vi/aqz-KE-bpKQ/hqdefault.jpg" alt="Video thumbnail" class="absolute top-0 left-0 w-full h-full object-cover" />
+            <span class="absolute bottom-2 right-2 bg-black bg-opacity-75 text-white text-xs px-1 rounded">7:45</span>
+          </div>
+          <div class="p-3">
+            <h3 class="text-sm font-semibold mb-1 line-clamp-2">Sample Video Title 7</h3>
+            <p class="text-xs text-gray-600">Channel Seven • 800K views • 2 days ago</p>
+          </div>
+        </article>
+        <article class="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg transition-shadow duration-200">
+          <div class="relative pb-[56.25%] bg-gray-300">
+            <img src="https://i.ytimg.com/vi/5qap5aO4i9A/hqdefault.jpg" alt="Video thumbnail" class="absolute top-0 left-0 w-full h-full object-cover" />
+            <span class="absolute bottom-2 right-2 bg-black bg-opacity-75 text-white text-xs px-1 rounded">20:00</span>
+          </div>
+          <div class="p-3">
+            <h3 class="text-sm font-semibold mb-1 line-clamp-2">Sample Video Title 8</h3>
+            <p class="text-xs text-gray-600">Channel Eight • 3M views • 1 week ago</p>
+          </div>
+        </article>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
