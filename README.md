@@ -30,7 +30,7 @@ Ikuti langkah-langkah di bawah ini untuk menginstal dan menjalankan proyek ini d
 1. **Clone Repository**:
 
    ```bash
-   git clone https://github.com/username/youtube-replica-ui.git
+   git clone https://github.com/Shandyka-PW/youtube-replica-ui.git
    ```
 
 2. **Masuk ke Direktori Proyek**:
